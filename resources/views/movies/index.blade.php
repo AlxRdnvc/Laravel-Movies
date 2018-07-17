@@ -11,7 +11,9 @@
     <body>
         <ul>
             @foreach($movies as $movie)
-            <h4>{{ $movie->title }}</h4>
+            <a href="{{ '/movies/'.$movie->id }}">
+                <h4>{{ $movie->title }}</h4>
+            </a>
             <p>{{ $movie->storyline }}</p><hr>
             @endforeach
         </ul>
