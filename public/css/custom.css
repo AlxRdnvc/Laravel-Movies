@@ -165,3 +165,8 @@
   .blog-footer p:last-child {
     margin-bottom: 0;
   }
+
+  .subtitle {
+    margin: 0;
+    font-size: 0.8em;
+  }

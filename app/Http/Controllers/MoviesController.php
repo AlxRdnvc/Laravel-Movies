@@ -17,4 +17,32 @@ class MoviesController extends Controller
         $movies= Movie::findOrFail($id);
         return view('movies.show', compact('movies'));
     }
+
+    public function create()
+    {
+        return view("movies.create");
+    }
+
+    public function store(Request $request)
+    {
+
+            $request->validate([
+                'title' => 'required',
+                'genre' => 'required',
+                'director' => 'required',
+                'year'=> 'between: 1900, 2018',
+                'storyline' => 'required|max:500'
+            ]);
+
+            Movie::create([
+                'title' => request('title'),
+                'genre' => request('genre'),
+                'director' => request('director'),
+                'year' => request('year'),
+                'storyline' => request('storyline')
+            ]);
+
+            
+            return redirect("/movies");
+    }
 }

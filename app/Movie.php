@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
 {
-    protected $fillable = [
-        'title', 'storyline'
-    ];
+    protected $fillable = ['title', 'genre', 'director' , 'year', 'storyline'];
+
+    public $timestamps = false;
 }
