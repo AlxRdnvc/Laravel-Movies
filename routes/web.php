@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/movies');
 });
 
 Route::get('/movies', 'MoviesController@index');
@@ -22,5 +22,7 @@ Route::get('/movies/{id}', 'MoviesController@show');
 Route::get('/create', 'MoviesController@create');
 
 Route::post('/create', 'MoviesController@store' );
+
+Route::post('/movies/{movie}', 'CommentsController@store');
 
 

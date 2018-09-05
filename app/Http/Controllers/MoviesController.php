@@ -26,11 +26,12 @@ class MoviesController extends Controller
     public function store(Request $request)
     {
 
+
             $request->validate([
                 'title' => 'required',
                 'genre' => 'required',
                 'director' => 'required',
-                'year' => 'integer | between: 1900, 2018',
+                'year' => 'nullable |integer | between: 1900,'.date('Y'),
                 'storyline' => 'required|max:1000'
             ]);
 
