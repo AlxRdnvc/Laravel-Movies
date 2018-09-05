@@ -4,7 +4,7 @@
 @section('content')
     <div class="container">
         <h5>Add new movie:</h5><hr>
-        <form>
+        <form action="/create" method="POST">
 
         {{ csrf_field() }}
 
