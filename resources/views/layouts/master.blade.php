@@ -21,11 +21,12 @@
 
       <div class="row">
 
-        <div class="col-sm-8 blog-main">
+        <div class="col-md-8 order-md-1">
 
             @yield('content')
 
         </div><!-- /.blog-main -->
+        @include('partials.sidebar')
       </div><!-- /.row -->
     </div><!-- /.container -->
 
